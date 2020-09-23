@@ -1,0 +1,147 @@
+.numContainer {
+  position: relative;
+  display: flex;
+}
+
+.cardContainer {
+  position: relative;
+  width: 68px;
+  height: 94px;
+  margin-right: 10px;
+  overflow: hidden;
+  .outside, .inside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .cardTop {
+    left: 0;
+    top: 0;
+    width: 68px;
+    height: 88px;
+    .outside {
+      background-repeat: no-repeat;
+      background-position: left top;
+      animation-name: midToTop;
+      animation-duration: 0.25s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-delay: 0.25s;
+      height: 0;
+    }
+    .inside {
+      height: 88px;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+  }
+  .cardBottom {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 68px;
+    height: 100px;
+    .inside {
+      background-repeat: no-repeat;
+      background-position: left 50px;
+      height: 100px;
+    }
+    .outside {
+      animation-name: downToMid;
+      animation-duration: 0.25s;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      background-repeat: no-repeat;
+      background-position: left 50px;
+      height: 100px;
+    }
+  }
+  .cardTop {
+    .card-0 {
+      background-image: url('./images/0-top.png');
+    }
+    .card-1 {
+      background-image: url('./images/1-top.png');
+    }
+    .card-2 {
+      background-image: url('./images/2-top.png');
+    }
+    .card-3 {
+      background-image: url('./images/3-top.png');
+    }
+    .card-4 {
+      background-image: url('./images/4-top.png');
+    }
+    .card-5 {
+      background-image: url('./images/5-top.png');
+    }
+    .card-6 {
+      background-image: url('./images/6-top.png');
+    }
+    .card-7 {
+      background-image: url('./images/7-top.png');
+    }
+    .card-8 {
+      background-image: url('./images/8-top.png');
+    }
+    .card-9 {
+      background-image: url('./images/9-top.png');
+    }
+  }
+  .cardBottom {
+    .card-0 {
+      background-image: url('./images/0-bottom.png');
+    }
+    .card-1 {
+      background-image: url('./images/1-bottom.png');
+    }
+    .card-2 {
+      background-image: url('./images/2-bottom.png');
+    }
+    .card-3 {
+      background-image: url('./images/3-bottom.png');
+    }
+    .card-4 {
+      background-image: url('./images/4-bottom.png');
+    }
+    .card-5 {
+      background-image: url('./images/5-bottom.png');
+    }
+    .card-6 {
+      background-image: url('./images/6-bottom.png');
+    }
+    .card-7 {
+      background-image: url('./images/7-bottom.png');
+    }
+    .card-8 {
+      background-image: url('./images/8-bottom.png');
+    }
+    .card-9 {
+      background-image: url('./images/9-bottom.png');
+    }
+  }
+
+}
+
+@keyframes downToMid {
+  from {
+    transform: rotateX(0deg);
+    height: 100%;
+  }
+  to {
+    transform: rotateX(90deg);
+    display: none;
+  }
+}
+
+@keyframes midToTop {
+  from {
+    transform: rotateX(90deg);
+    height: 100%;
+  }
+  to {
+    height: 100%;
+    transform: rotateX(180);
+  }
+}
